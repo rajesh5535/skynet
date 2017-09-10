@@ -1,0 +1,35 @@
+package stacks;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class QueueUsingStacks {
+
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack<Integer>();
+		Scanner sc = new Scanner(System.in);
+		push(stack, 1);push(stack, 2);push(stack, 3);push(stack, 4);
+		convert(stack);
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println(-126/60);
+		System.out.println(-126%60);
+
+	}
+
+	private static void convert(Stack<Integer> stack) {
+		if(stack.empty())
+			return;
+		int k = stack.pop();
+		convert(stack);
+		stack.push(k);
+		}
+
+	private static void push(Stack<Integer> stack, int i) {
+		stack.push(i);
+	}
+	private static void pop(Stack<Integer> stack) {
+		stack.push(i);
+	}
+}

@@ -1,0 +1,32 @@
+package stacks;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Reverse {
+	static Stack<Integer> stacky = new Stack<>();
+	public static void main(String[] args) {
+		Stack<Integer> bList = new Stack<>();
+		// Scanner sc = new Scanner(System.in);
+		// String target = sc.next();
+		bList.push(1);
+		bList.push(2);
+		bList.push(3);
+		bList.push(4);
+		bList.push(5);
+		reverse(bList);
+		while(!stacky.isEmpty())//stacky will have reversed entries
+			System.out.println(stacky.pop());
+	}
+
+	private static Stack<Integer> reverse(Stack<Integer> bList) {
+		// TODO Auto-generated method stub
+
+		if(bList==null)
+			return null;
+		if(!bList.isEmpty())
+		{stacky.push(bList.pop());
+		reverse(bList);}
+	 return null;
+	}
+}
